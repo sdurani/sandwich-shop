@@ -26,6 +26,16 @@ public class PointOfSale {
 //            System.out.println("ERROR: Invalid selection.");
 //        }
 
+        read.nextLine();
+
+        System.out.println("Would you like your sandwich to be loaded? (press Y or N)");
+        String isLoaded = read.nextLine();
+        if (isLoaded.equalsIgnoreCase("Y")) {
+            selectedSandwichPrice += 1.00;
+        } else if (isLoaded.equalsIgnoreCase("N")) {
+            selectedSandwichPrice += 1.75;
+        }
+
         double discountTen = 0.1 * selectedSandwichPrice;
         double discountTwenty = 0.2 * selectedSandwichPrice;
 
