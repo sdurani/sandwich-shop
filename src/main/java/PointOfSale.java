@@ -55,5 +55,6 @@ public class PointOfSale {
         else {
             System.out.printf("Your sandwich costs: $%.2f", selectedSandwichPrice);
         }
+        read.close();
     }
 }
