@@ -29,11 +29,15 @@ public class PointOfSale {
         read.nextLine();
 
         System.out.println("Would you like your sandwich to be loaded? (press Y or N)");
+        System.out.println("# 1. Regular: additional +$1.00");
+        System.out.println("# 2. Large: additional +$1.75");
         String isLoaded = read.nextLine();
         if (isLoaded.equalsIgnoreCase("Y")) {
-            selectedSandwichPrice += 1.00;
-        } else if (isLoaded.equalsIgnoreCase("N")) {
-            selectedSandwichPrice += 1.75;
+            if (userChoice == 1) {
+                selectedSandwichPrice += 1.00;
+            } else if (userChoice == 2) {
+                selectedSandwichPrice += 1.75;
+            }
         }
 
         double discountTen = 0.1 * selectedSandwichPrice;
